@@ -1,0 +1,24 @@
+services:
+  python-app:
+    build: .
+    container_name: python_app
+    environment:
+      - MONGO_HOST=mongodb
+      - MONGO_PORT=27017
+    depends_on:
+      - mongodb
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app:/app
+
+  mongodb:
+    image: mongo:5.0
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:
