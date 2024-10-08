@@ -20,6 +20,10 @@ collection = db["test_collection"]
 def read_root():
     return {"message": "Welcome to FastAPI with MongoDB!"}
 
+@app.get("/new")
+def read_root():
+    return {"message": "This is the new API you were hoping for!"}
+
 @app.post("/insert")
 def insert_document():
     # Insert a test document
