@@ -22,5 +22,5 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-          ${{ vars.DOCKER_USERNAME }}/${{ github.event.repository.name }}:v1.0.1
-          ${{ vars.DOCKER_USERNAME }}/${{ github.event.repository.name }}:latest
+            ${{ vars.DOCKER_USERNAME }}/${{ github.event.repository.name }}:v1.0.1
+            ${{ vars.DOCKER_USERNAME }}/${{ github.event.repository.name }}:latest
