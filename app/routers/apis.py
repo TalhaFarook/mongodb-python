@@ -1,4 +1,4 @@
-import pymongo
+import pymongo, os
 from fastapi import APIRouter, Request, HTTPException
 from fastapi.responses import JSONResponse
 from pymongo import MongoClient

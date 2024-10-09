@@ -2,8 +2,8 @@
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
-import os
 from routers.apis import apis_router
+import uvicorn
 
 app = FastAPI()
 
@@ -16,3 +16,6 @@ app.add_middleware(
 )
 
 app.include_router(apis_router, prefix="/apis")
+
+if __name__ == "__main__":
+    uvicorn.run(app)

@@ -13,8 +13,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the entire app directory into the container
 COPY ./app /app
 
-COPY ./routers /routers
-
 # Expose the application port
 EXPOSE 8000
 
